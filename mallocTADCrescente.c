@@ -9,7 +9,7 @@ int main()
 {
     int numero;
     struct regLista *inicio, *aux, *ant, *aux2;
-/* inicializando a vari·vel inicio com um endereco vazio */
+/* inicializando a vari√°vel inicio com um endereco vazio */
     inicio = NULL;
     while(1)
     {
@@ -17,9 +17,9 @@ int main()
         scanf("%d", &numero);
         if( numero < 0 )
             break;
-/* criando uma vari·vel struct regLista dinamicamente */
+/* criando uma vari√°vel struct regLista dinamicamente */
         aux = (struct regLista *) malloc( sizeof(struct regLista) );
-/* preenchendo os campos da vari·vel criada dinamicamente */
+/* preenchendo os campos da vari√°vel criada dinamicamente */
         aux->valor = numero;
         aux->prox = NULL;
         if( inicio == NULL )
@@ -31,20 +31,18 @@ int main()
 				aux->prox = inicio;
 				inicio = aux;
 			}
-	        else   //comeÁa os testes com os demais
+	        else   //come√ßa os testes com os demais
 	        {
 	            aux2 = inicio->prox;
 	            ant = inicio;
 	            while ( aux2 != NULL )
 	            {
 	                if (aux2->valor > aux->valor)
-					{   printf("%d\n", aux2->valor);
-						aux->prox = aux2;
+					{   aux->prox = aux2;
 						ant->prox = aux;
 					}
 					else
-					{
-						ant = aux2;
+					{	ant = aux2;
 						aux2 = aux2->prox;
 					}
 	            }
