@@ -1,2 +1,3 @@
 # adsfatec
-Repositório para projetos escolares.
+Felipe Augusto Trindade
+Mudança para testar os branchs do Git.
